@@ -3,8 +3,10 @@ import useForm from "react-hook-form";
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Layout from "../components/layout/Layout";
+import LayoutLogout from "../components/layout/LayoutLogout";
 import Router from 'next/router'
+
+let loggedIn = false;
 
 const schema = yup.object().shape({
     username: yup
@@ -32,7 +34,7 @@ export default function Index() {
         Router.push('/login')
     }
     return (
-        <Layout>
+        <LayoutLogout>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
@@ -54,6 +56,6 @@ export default function Index() {
 
                 <Button type="submit">Register</Button>
             </Form>
-        </Layout>
+        </LayoutLogout>
     );
 }

@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
-export default function Layout(props) {
+export default function LayoutLogout(props) {
     return (
         <>
             <NextHead>
@@ -26,19 +26,14 @@ export default function Layout(props) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Link href="/home">
-                            <a>
-                                <Nav.Link as="span">Home</Nav.Link>
-                            </a>
-                        </Link>
-                        <Link href="/about">
-                            <a>
-                                <Nav.Link as="span">About</Nav.Link>
-                            </a>
-                        </Link>
                         <Link href="/">
                             <a>
-                                <Nav.Link as="span">Logout</Nav.Link>
+                                <Nav.Link as="span">Register</Nav.Link>
+                            </a>
+                        </Link>
+                        <Link href="/login">
+                            <a>
+                                <Nav.Link as="span">Login</Nav.Link>
                             </a>
                         </Link>
                     </Nav>
@@ -49,6 +44,6 @@ export default function Layout(props) {
     );
 }
 
-Layout.propTypes = {
+LayoutLogout.propTypes = {
     children: PropTypes.node.isRequired,
 };

@@ -9,7 +9,7 @@ export default function About() {
             <Head title="About" />
 
             <Link href="/">
-                <a>Home</a>
+                <a>About</a>
             </Link>
         </Layout>
     );

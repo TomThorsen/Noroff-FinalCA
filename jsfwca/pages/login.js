@@ -3,11 +3,12 @@ import useForm from "react-hook-form";
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Layout from "../components/layout/Layout";
+import LayoutLogout from "../components/layout/LayoutLogout";
 import Router from 'next/router'
 
 const userNameStorage = localStorage.getItem('userNameStorage');
 const userPassStorage = localStorage.getItem('userPassStorage');
+let loggedIn = false;
 
 console.log('Username', userNameStorage);
 console.log('Password', userPassStorage);
@@ -33,9 +34,10 @@ export default function Index() {
     });
     function onSubmit(data) {
         Router.push('/about')
+        let loggedIn = true;
     }
     return (
-        <Layout>
+        <LayoutLogout>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
@@ -51,6 +53,6 @@ export default function Index() {
 
                 <Button type="submit">Login</Button>
             </Form>
-        </Layout>
+        </LayoutLogout>
     );
 }
