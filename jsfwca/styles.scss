@@ -1,0 +1,133 @@
+/* Layout */
+.layout__navbar {
+  background-color: #3a99cd !important;
+}
+.layout__brand {
+  font-weight: bold;
+  margin-right: 40px;
+}
+.layout__link {
+  font-size: 1.2em;
+  text-decoration: none !important;
+  margin-left: 10px;
+}
+.layout__linktext {
+  color: white !important;
+}
+.layout__linktext:hover {
+  color: #d4d4d4 !important;
+}
+.button--color {
+  background-color: #3a99cd !important;
+}
+
+/* Spinner */
+.spinner {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 100px;
+}
+
+/* Search */
+.search {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.search__button {
+  color: white;
+  background-color: #3a99cd;
+  border-color: #3a99cd;
+}
+.search__field {
+  width: 200px;
+}
+
+/* Cards */
+.gamecard {
+  border-style: none;
+  margin-bottom: 30px;
+
+}
+.gamecard__container {
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+.gamecard__header {
+  text-align: center;
+}
+.gamecard__imageerror {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 310px;
+  font-size: 1.5em;
+  background-color: #339DCB;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 3px;
+
+}
+.gamecard__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.gamecard__buttontext {
+  background-color: #3a99cd;
+  border-radius: 3px;
+  width: 120px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+/* Specific Card */
+.cardspec {
+  display: flex !important;
+  flex-direction: row !important;
+  margin-top: 50px !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Accordion */
+.accordion {
+  margin-top: 30px;
+}
+.accordion__body {
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: #d4d4d4 !important;
+  border-radius: 5px !important;
+}
+.accordion__heading {
+  color: white !important;
+  background-color:#3a99cd !important;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.accordion__text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Forms */
+.formcontainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.formcontainer__form {
+  width: 400px;
+}
+.formcontainer__formbutton {
+  text-align: center;
+  margin-top: 30px;
+}
+.contactform {
+  margin-top: 30px;
+}

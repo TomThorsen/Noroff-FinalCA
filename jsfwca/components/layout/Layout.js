@@ -17,28 +17,33 @@ export default function Layout(props) {
                     crossOrigin="anonymous"
                 />
             </NextHead>
-            <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg" className="layout__navbar">
                 <Link href="/">
                     <a>
-                        <Navbar.Brand>Noroff Javascript Frameworks CA</Navbar.Brand>
+                        <Navbar.Brand className="layout__brand">Noroff Javascript Frameworks CA</Navbar.Brand>
                     </a>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link href="/home">
-                            <a>
-                                <Nav.Link as="span">Home</Nav.Link>
+                            <a className="layout__link">
+                                <Nav.Link as="span" className="layout__linktext">Home</Nav.Link>
                             </a>
                         </Link>
                         <Link href="/about">
-                            <a>
-                                <Nav.Link as="span">About</Nav.Link>
+                            <a className="layout__link">
+                                <Nav.Link as="span" className="layout__linktext">About</Nav.Link>
+                            </a>
+                        </Link>
+                        <Link href="/contactus">
+                            <a className="layout__link">
+                                <Nav.Link as="span" className="layout__linktext">Contact Us</Nav.Link>
                             </a>
                         </Link>
                         <Link href="/">
-                            <a>
-                                <Nav.Link as="span">Logout</Nav.Link>
+                            <a className="layout__link">
+                                <Nav.Link as="span" className="layout__linktext">Logout</Nav.Link>
                             </a>
                         </Link>
                     </Nav>

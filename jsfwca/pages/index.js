@@ -5,8 +5,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import LayoutLogout from "../components/layout/LayoutLogout";
 import Router from 'next/router'
+import css from "../styles.scss";
 
-let loggedIn = false;
 
 const schema = yup.object().shape({
     username: yup
@@ -35,27 +35,30 @@ export default function Index() {
     }
     return (
         <LayoutLogout>
-            <Form onSubmit={handleSubmit(onSubmit)}>
-                <Form.Group>
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control name="username" placeholder="Enter your desired username" ref={register} />
-                    {errors.username && <p>{errors.username.message}</p>}
-                </Form.Group>
+            <div className="formcontainer">
+                <Form className="formcontainer__form" onSubmit={handleSubmit(onSubmit)}>
+                    <Form.Group>
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control name="username" placeholder="Enter your desired username" ref={register} />
+                        {errors.username && <p>{errors.username.message}</p>}
+                    </Form.Group>
 
-                <Form.Group>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control name="password" placeholder="Enter a password, 8 characters minimum" type="password" ref={register} />
-                    {errors.password && <p>{errors.password.message}</p>}
-                </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control name="password" placeholder="Enter a password, 8 characters minimum" type="password" ref={register} />
+                        {errors.password && <p>{errors.password.message}</p>}
+                    </Form.Group>
 
-                <Form.Group>
-                    <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control name="passwordConfirm" placeholder="Confirm your password" type="password" ref={register} />
-                    {errors.passwordConfirm && <p>{errors.passwordConfirm.message}</p>}
-                </Form.Group>
-
-                <Button type="submit">Register</Button>
-            </Form>
+                    <Form.Group>
+                        <Form.Label>Confirm Password</Form.Label>
+                        <Form.Control name="passwordConfirm" placeholder="Confirm your password" type="password" ref={register} />
+                        {errors.passwordConfirm && <p>{errors.passwordConfirm.message}</p>}
+                    </Form.Group>
+                    <div className="formcontainer__formbutton">
+                        <Button className="button--color" type="submit">Register</Button>
+                    </div>
+                </Form>
+            </div>
         </LayoutLogout>
     );
 }

@@ -17,23 +17,23 @@ export default function LayoutLogout(props) {
                     crossOrigin="anonymous"
                 />
             </NextHead>
-            <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg" className="layout__navbar">
                 <Link href="/">
                     <a>
-                        <Navbar.Brand>Noroff Javascript Frameworks CA</Navbar.Brand>
+                        <Navbar.Brand className="layout__brand">Noroff Javascript Frameworks CA</Navbar.Brand>
                     </a>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link href="/">
-                            <a>
-                                <Nav.Link as="span">Register</Nav.Link>
+                            <a className="layout__link">
+                                <Nav.Link as="span" className="layout__linktext">Register</Nav.Link>
                             </a>
                         </Link>
                         <Link href="/login">
-                            <a>
-                                <Nav.Link as="span">Login</Nav.Link>
+                            <a className="layout__link">
+                                <Nav.Link as="span" className="layout__linktext">Login</Nav.Link>
                             </a>
                         </Link>
                     </Nav>
